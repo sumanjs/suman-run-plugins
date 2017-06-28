@@ -32,14 +32,18 @@ exports.getTransformPath = function(){
 ```
 
 2. <b> your index.sh file must be able to handle a JSON array of test paths</b>
+<br>
  => the JSON array is an env variable with name `${SUMAN_TEST_PATHS}`
  => these test paths are absolute filepaths.
 
 
-3. <b>your index.sh file must use the correct exit code.</b> To ensure this, the best thing to do
+3. <b>your index.sh file must use the correct exit code.</b> 
+<br>
+To ensure this, the best thing to do
 is to make the last line of your index.sh file the command which runs your tests.
 
 
 4. <b>Your plugin should pass the following test:</b>
+<br>
 
 ```suman-tools --test-run-plugin=<plugin-name>```
