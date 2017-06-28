@@ -2,20 +2,19 @@
 
 Plugin contract:
 
-Suman plugins can be loaded in a Node.js runtime via:
+Suman run plugins can be loaded in a Node.js runtime via:
 
 ```javascript
 require('suman-run-plugins/plugins/x')
 ```
 
 this will load the index.js file of your plugin.
-
 Because of the structure of this repo, 'x' will be a unique name.
 
 
 ## API Contract
 
-1. Your index.js file should have the following contract:
+1. <b>Your index.js file should have the following contract:</b>
 
 ```javascript
 
@@ -32,16 +31,15 @@ exports.getTransformPath = function(){
 
 ```
 
-2. your index.sh file must be able to handle a JSON array of test paths
+2. <b> your index.sh file must be able to handle a JSON array of test paths</b>
+ => the JSON array is an env variable with name `${SUMAN_TEST_PATHS}`
+ => these test paths are absolute filepaths.
 
-the JSON array is an env variable with name `${SUMAN_TEST_PATHS}`
 
-
-3. your index.sh file must pass the exit code properly. To ensure this, the best thing to do
+3. <b>your index.sh file must use the correct exit code.</b> To ensure this, the best thing to do
 is to make the last line of your index.sh file the command which runs your tests.
 
 
+4. <b>Your plugin should pass the following test:</b>
 
-4. Your plugin should pass the following test:
-
-suman-tools --test-run-plugin=<plugin-name>
+```suman-tools --test-run-plugin=<plugin-name>```
