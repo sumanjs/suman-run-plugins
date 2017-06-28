@@ -22,7 +22,9 @@ Because of the structure of this repo, 'x' will be a unique name.
 ## API Contract
 
 1. <b>Your index.js file should have the following contract:</b>
+
 <br>
+
 ```javascript
 
 const fs = require('fs');
@@ -37,6 +39,7 @@ exports.getTransformPath = function(){
 };
 
 ```
+
 <br>
 2. <b> your index.sh file must be able to handle a JSON array of test paths</b>
 <br>
@@ -52,5 +55,6 @@ is to make the last line of your index.sh file the command which runs your tests
 <br>
 4. <b>Your plugin should pass the following test:</b>
 <br>
+
 
 ```suman-tools --test-run-plugin=<plugin-name>```
