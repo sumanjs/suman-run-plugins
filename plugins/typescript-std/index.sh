@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
 cd $(dirname "$0");
-echo "we are running @run.sh"
-chmod -R 777 $(pwd)/@target
+echo "we are running @run.sh => suman-run-plugins/plugins/typescript-std => $0"
+
+WHICH_SUMAN=$(which suman);
+
+if [[ -z "${WHICH_SUMAN}" ]]; then
+   npm install -g suman
+fi
 
 if [[ ! -z ${SUMAN_CHILD_TEST_PATH} ]]; then
 
@@ -14,7 +19,10 @@ if [[ ! -z ${SUMAN_CHILD_TEST_PATH} ]]; then
 
 else
 
-   suman --test-paths-json="${SUMAN_TEST_PATHS}" --replace-match="/@src/" --replace-with="/@target/" --replace-ext-with=".js"
+  echo "running suman test paths...";
+
+    # TODO: chmod -R 777 $(pwd)/@target
+   suman --runner --inherit-stdio --test-paths-json="${SUMAN_TEST_PATHS}" --replace-match="/@src/" --replace-with="/@target/" --replace-ext-with=".js"
 
 fi
 

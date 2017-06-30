@@ -56,5 +56,34 @@ is to make the last line of your index.sh file the command which runs your tests
 4. <b>Your plugin should pass the following test:</b>
 <br>
 
+<br>
+4. <b>Your index.sh file should be executable, but not readable or writable.</b>
+<br>
 
 ```suman-tools --test-run-plugin=<plugin-name>```
+
+
+When you want to actually use your plugin, you would do this:
+
+
+// @config.json
+{
+  "@run": {
+    "plugin": {
+      "location": "npm",
+      "value": "suman-run-plugins/plugins/x"
+    }
+  }
+}
+
+
+Suman will then use this plugin to execute any tests in subdirectories that match /@target/
+
+
+5. Suman run plugins should be simple, serial and bug-free:
+
+ @run.sh should be written with simple serial processing and not attempt to do more
+ work than 1 processor could do. This allows Suman to maximize speed by parallelizing other processses.
+ 
+ No branching logic is permitted in run files, 
+ except to installing missing dependencies if they do not exist.
