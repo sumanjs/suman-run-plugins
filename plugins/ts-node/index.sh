@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-cd $(dirname "$0");
 echo "we are running @run.sh => suman-run-plugins/plugins/typescript-std => $0"
 
 WHICH_TSC=$(which tsc);
