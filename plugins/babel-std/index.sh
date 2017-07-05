@@ -13,16 +13,15 @@ if [[ -z ${SUMAN_CHILD_TEST_PATH} ]]; then
     suman --runner --inherit-stdio --test-paths-json="${SUMAN_TEST_PATHS}" --replace-match="/@src/" \
     --replace-with="/@target/" --replace-ext-with=".js"
 
-
 else
 
     SUMAN_TARGET="${SUMAN_CHILD_TEST_PATH//@src/@target}"
     SUMAN_TARGET=${SUMAN_TARGET%.*}.js
     echo "SUMAN_TARGET => ${SUMAN_TARGET}"
     echo "node version => $(node -v)"
-#    node ${SUMAN_TARGET} | tee -a run.log
+    #node ${SUMAN_TARGET} | tee -a run.log
 
- node ${SUMAN_TARGET}
+    node ${SUMAN_TARGET}
 
 fi
 
