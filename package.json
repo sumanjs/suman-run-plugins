@@ -1,6 +1,6 @@
 {
   "name": "suman-run-plugins",
-  "version": "0.0.101",
+  "version": "0.0.102",
   "description": "Plugins for running target code with various runtimes.",
   "main": "index.js",
   "scripts": {
