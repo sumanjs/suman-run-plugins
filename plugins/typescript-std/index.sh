@@ -8,7 +8,7 @@ if [[ -z "${WHICH_SUMAN}" ]]; then
    npm install -g suman
 fi
 
-if [[ ! -z ${SUMAN_CHILD_TEST_PATH} ]]; then
+if [[ -n ${SUMAN_CHILD_TEST_PATH} ]]; then
 
     SUMAN_TARGET="${SUMAN_CHILD_TEST_PATH//@src/@target}"
     SUMAN_RUNNABLE=${SUMAN_TARGET%.*}.js
