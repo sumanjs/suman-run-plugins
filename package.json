@@ -25,9 +25,12 @@
     "jasmine"
   ],
   "author": "Olegzandr VD",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sumanjs/suman-run-plugins/issues"
   },
-  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme"
+  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme",
+  "dependencies": {
+    "ts-node": "^3.3.0"
+  }
 }
