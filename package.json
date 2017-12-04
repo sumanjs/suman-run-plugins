@@ -1,7 +1,7 @@
 {
   "name": "suman-run-plugins",
   "version": "0.0.104",
-  "description": "Plugins for running target code with various runtimes.",
+  "description": "Plugins for running target code with various executables.",
   "main": "index.js",
   "scripts": {
     "test": "suman"
@@ -12,13 +12,12 @@
   },
   "keywords": [
     "suman",
+    "suman-run-plugins",
     "testing",
     "plugins",
     "sumanjs",
     "execute",
     "run",
-    "compile",
-    "transpile",
     "test",
     "mocha",
     "ava",
@@ -29,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/sumanjs/suman-run-plugins/issues"
   },
-  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme",
-  "dependencies": {
-    "ts-node": "^3.3.0"
-  }
+  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme"
 }
