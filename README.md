@@ -1,12 +1,13 @@
 
 # Suman Run Plugins
 
-# To contribute see CONTRIBUTING.md
+### To contribute see CONTRIBUTING.md
 
-Users use the plugins in this package by including a @config.json file in their tests
+Use the plugins in this package by including @config.json file(s) in your project
 
 ```json
-// @config.json
+// An example @config.json file
+
 {
   "@run": {
     "plugin": {
@@ -28,7 +29,7 @@ Each plugin is versioned separately - as each plugin is published separately to 
 
 You can import either:
 
-`suman-run-plugins/plugins/x`    # will always be the latest version, is bundled with suman
+`suman-run-plugins/plugins/x`    # will always be the latest version of all plugins, is bundled with suman
 
 or
 
