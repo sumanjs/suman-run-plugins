@@ -28,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/sumanjs/suman-run-plugins/issues"
   },
-  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme"
+  "homepage": "https://github.com/sumanjs/suman-run-plugins#readme",
+  "devDependencies": {
+    "@types/core-js": "^0.9.46",
+    "@types/node": "^10.1.4"
+  }
 }
